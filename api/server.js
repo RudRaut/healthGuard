@@ -202,7 +202,10 @@ app.post('/getSuggestions', async (req, res) => {
      console.log("Clean response from model:", cleanedResponse);
    
    
-   
+    if (!cleanedResponse.trim().endsWith('}')) {
+      cleanedResponse += '}';
+    }
+
      const parsedJson = JSON.parse(cleanedResponse);
 
     res.status(200).json(parsedJson);
