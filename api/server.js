@@ -160,6 +160,9 @@ const modelName = modelSize === '70b'
 app.post('/getSuggestions', async (req, res) => {
   const { heartRate, temperature } = req.body;
 
+  console.log("BODY: ", req.body, 'HR: ', heartRate, 'TEMP: ', temperature);
+  
+
   if (!heartRate || !temperature) {
     return res.status(400).json({ error: 'Both heartRate and temperature are required.' });
   }

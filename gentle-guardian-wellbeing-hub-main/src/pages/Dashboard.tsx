@@ -366,10 +366,10 @@ export default function Dashboard() {
   useEffect(() => {
     if (thingSpeakData) {
       if (thingSpeakData.field1) {
-        setHeartRate(thingSpeakData.field1);
+        setHeartRate(thingSpeakData.field3);
       }
       if (thingSpeakData.field2) {
-        setTemperature(thingSpeakData.field2);
+        setTemperature(thingSpeakData.field1);
       }
     }
   }, [thingSpeakData]);
@@ -664,7 +664,7 @@ export default function Dashboard() {
             </p>
           )}
 
-          {aiLoading && logs.length === 1 ? (
+          {aiLoading  ? (
             <p className="text-muted-foreground text-sm">
               Analyzing new data...
             </p>
