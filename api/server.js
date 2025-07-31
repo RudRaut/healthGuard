@@ -198,12 +198,15 @@ app.post('/getSuggestions', async (req, res) => {
       throw new Error("Received an empty response from the model.");
     }
 
-    const cleanedResponse = rawResponse.replace(/```json\n|\n```/g, '').trim();
+    let cleanedResponse = rawResponse.replace(/```json\n|\n```/g, '').trim();
      console.log("Clean response from model:", cleanedResponse);
    
    
     if (!cleanedResponse.trim().endsWith('}')) {
       cleanedResponse += '}';
+
+      console.log("Updates: ",cleanedResponse);
+      
     }
 
      const parsedJson = JSON.parse(cleanedResponse);
