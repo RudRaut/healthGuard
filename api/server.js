@@ -168,7 +168,7 @@ app.post('/getSuggestions', async (req, res) => {
   }
 
   const prompt = `
-    Analyze the following health data: Heart Rate is ${heartRate} bpm and Body Temperature is ${temperature}°F.
+    Analyze the following health data: Heart Rate is ${heartRate} bpm and Body Temperature is ${temperature}°C.
     Based on this data, provide a JSON object with three keys:
     1. "badSign": A string describing any potential negative signs. If none, say "No bad signs noted".
     2. "goodSign": A string describing any positive signs. If none, say "Data is within a neutral range.".
