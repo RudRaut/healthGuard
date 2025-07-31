@@ -8,7 +8,7 @@ type SuggestionResponse = {
 };
 
 export const useAi = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [suggestions, setSuggestions] = useState<SuggestionResponse | null>(
     null
   );
