@@ -559,7 +559,7 @@ export default function Dashboard() {
           <HealthCard
             title="Ramesh's Temperature"
             value={Number(temperature)}
-            unit="°F"
+            unit="°C"
             icon={Thermometer}
             status="normal"
             trend="stable"
