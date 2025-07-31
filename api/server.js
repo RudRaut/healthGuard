@@ -199,7 +199,11 @@ app.post('/getSuggestions', async (req, res) => {
     }
 
     const cleanedResponse = rawResponse.replace(/```json\n|\n```/g, '').trim();
-    const parsedJson = JSON.parse(cleanedResponse);
+     console.log("Clean response from model:", cleanedResponse);
+   
+   
+   
+     const parsedJson = JSON.parse(cleanedResponse);
 
     res.status(200).json(parsedJson);
   } catch (error) {
